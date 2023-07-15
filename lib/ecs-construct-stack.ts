@@ -38,10 +38,10 @@ export class TitilerCluster extends Construct {
         taskImageOptions: {
           image: ecs.ContainerImage.fromRegistry(TITILER_IMAGE),
           environment: {
-            PORT: "8000",
+            PORT: "80",
             WORKERS_PER_CORE: "1",
           },
-          containerPort: 8000,
+          // containerPort: 8000,
         },
         memoryLimitMiB: 2048,
         publicLoadBalancer: true,
